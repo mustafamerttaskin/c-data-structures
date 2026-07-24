@@ -1,38 +1,46 @@
-# c-data-structures
+<div align="center">
+
+# 🔗 c-data-structures
+
+**Sıfırdan C: bağlı liste ve yığın, birim testleriyle birlikte**
 
 ![C](https://img.shields.io/badge/C-C11-00599C?logo=c&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![Build](https://img.shields.io/badge/Build-Makefile-informational)
+![Tests](https://img.shields.io/badge/Tests-assert%20tabanlı-4c9a2a)
+![License](https://img.shields.io/badge/Bağımlılık-Yok-lightgrey)
 
-Small, dependency-free implementations of two classic data structures —
-a singly linked list and an array-based stack — written from scratch in C,
-with a unit test suite for each.
+</div>
 
-## Why
+---
 
-Practicing manual memory management, pointer manipulation, and API design
-in C outside of coursework. Kept intentionally small so every line is easy
-to explain.
+## Ne var
 
-## What's inside
+Harici bağımlılığı olmayan, sıfırdan yazılmış iki klasik veri yapısı:
+**tek yönlü bağlı liste (singly linked list)** ve **dizi tabanlı yığın
+(array-based stack)** — her ikisi için de birim test paketiyle birlikte.
 
-- **Linked list** (`src/linked_list.c`) — push front/back, remove by value,
-  contains, reverse, and a `list_to_string` helper for easy debugging.
-- **Stack** (`src/stack.c`) — fixed-capacity array-based stack with push,
-  pop, peek, and full/empty checks.
-- **Demo** (`src/main.c`) — runs both structures through a scripted set of
-  operations and prints the results.
-- **Tests** (`tests/`) — `assert`-based unit tests covering normal cases and
-  edge cases (empty list, full stack, popping from empty stack, etc).
+| Dosya | İçerik |
+|---|---|
+| `src/linked_list.c` | `push_front` / `push_back`, değere göre silme, `contains`, `reverse`, hata ayıklama için `list_to_string` |
+| `src/stack.c` | Sabit kapasiteli dizi tabanlı yığın — `push`, `pop`, `peek`, dolu/boş kontrolleri |
+| `src/main.c` | Her iki yapıyı senaryolu bir dizi işlemden geçiren demo |
+| `tests/` | Normal durumlar ve uç durumları (boş liste, dolu yığın, boş yığından pop) kapsayan assert tabanlı testler |
 
-## Building & running
+## Neden
+
+Ders dışında C'de elle bellek yönetimi, pointer manipülasyonu ve API
+tasarımını pratik etmek için. Her satırın kolayca açıklanabilmesi için
+bilinçli olarak küçük tutuldu.
+
+## Derleme ve çalıştırma
 
 ```bash
-make demo && ./demo   # run the walkthrough demo
-make test              # build and run all unit tests
-make clean              # remove build artifacts
+make demo && ./demo   # walkthrough demosunu çalıştır
+make test             # tüm birim testlerini derle ve çalıştır
+make clean             # derleme çıktılarını temizle
 ```
 
-### Example output
+### Örnek çıktı
 
 ```
 === Linked List demo ===
@@ -50,7 +58,7 @@ Popped: 1
 Stack empty now? yes
 ```
 
-## Project structure
+## Proje yapısı
 
 ```
 c-data-structures/
